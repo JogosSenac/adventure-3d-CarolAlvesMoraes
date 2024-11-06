@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
+    [SerializeField]GameObject menuEsc;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,12 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
+        if(menuEsc != null){
+            if(Input.GetKeyUp(KeyCode.Escape)){
+                Debug.Log("escape apertado");
+                AbrirEsc(); 
+            }
+        }
     }
     public void Play()
     {
@@ -37,5 +43,11 @@ public class Menu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void AbrirEsc(){
+        menuEsc.SetActive(true);
+    }
+    public void FecharEsc(){
+        menuEsc.SetActive(false);
     }
 }

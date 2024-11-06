@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Jogo3D.sln"
+    "dotnet.defaultSolution": "adventure-3d-CarolAlvesMoraes.sln"
 }
